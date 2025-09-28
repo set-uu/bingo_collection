@@ -1,7 +1,14 @@
+import 'package:bingo_collection/environment.dart';
 import 'package:flutter/material.dart';
+import 'package:clarity_flutter/clarity_flutter.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ClarityWidget(
+      app: const MyApp(),
+      clarityConfig: ClarityConfig(projectId: Environment.clarityProjectId),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
